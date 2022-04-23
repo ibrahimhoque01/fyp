@@ -13,7 +13,7 @@ export const userStore = defineStore("userStore", {
   actions: {
     async loginUser(email, password) {
       const res = await fetch(
-        `http://localhost:5000/users?email=${email}&password=${password}`
+        `https://my-json-server.typicode.com/ibrahimhoque01/db.json/users?email=${email}&password=${password}`
       );
 
       const data = await res.json();
@@ -25,25 +25,28 @@ export const userStore = defineStore("userStore", {
     },
 
     async registerUser(userName, userEmail, userPassword) {
-      const res = await fetch(`http://localhost:5000/users`, {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
+      const res = await fetch(
+        `https://my-json-server.typicode.com/ibrahimhoque01/db.json/users`,
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
 
-        body: JSON.stringify({
-          name: userName,
-          email: userEmail,
-          password: userPassword,
-        }),
-      });
+          body: JSON.stringify({
+            name: userName,
+            email: userEmail,
+            password: userPassword,
+          }),
+        }
+      );
 
       router.push({ path: "/" });
     },
 
     async orderHistory() {
       const res = await fetch(
-        `http://localhost:5000/orders?userId=${this.userId}`
+        `https://my-json-server.typicode.com/ibrahimhoque01/db.json/orders?userId=${this.userId}`
       );
 
       const data = await res.json();

@@ -10,13 +10,16 @@ export const cartStore = defineStore("cartStore", {
 
   actions: {
     async checkout(order) {
-      const res = await fetch(`http://localhost:5000/orders`, {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(order),
-      });
+      const res = await fetch(
+        `https://my-json-server.typicode.com/ibrahimhoque01/db.json/orders`,
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify(order),
+        }
+      );
 
       const data = await res.json();
       this.cart = [];

@@ -7,7 +7,7 @@ export const menuStore = defineStore("menuStore", {
 
   actions: {
     async getMenu() {
-      const res = await fetch("http://localhost:5000/menu");
+      const res = await fetch("https://my-json-server.typicode.com/ibrahimhoque01/db.json/menu");
       const data = await res.json();
       this.menu = data;
     },
