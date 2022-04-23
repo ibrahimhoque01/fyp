@@ -1,25 +1,61 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from "../views/HomeView.vue";
+import ItemView from "../views/ItemView.vue";
+import CheckoutView from "../views/CheckoutView.vue";
+import LoginView from "../views/LoginView.vue";
+import ProfileView from "../views/ProfileView.vue";
+import OrderView from "../views/OrderView.vue";
+import RegisterView from "../views/RegisterView.vue";
+import ConfirmationView from "../views/ConfirmationView.vue";
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/",
+    name: "HomeView",
+    component: HomeView,
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+    path: "/item/:itemId",
+    name: "ItemView",
+    component: ItemView,
+    params: true,
+  },
+  {
+    path: "/checkout",
+    name: "CheckoutView",
+    component: CheckoutView,
+  },
+  {
+    path: "/login",
+    name: "LoginView",
+    component: LoginView,
+  },
+
+  {
+    path: "/profile",
+    name: "ProfileView",
+    component: ProfileView,
+  },
+  {
+    path: "/order/:orderId",
+    name: "OrderView",
+    component: OrderView,
+  },
+  {
+    path: "/register",
+    name: "RegisterView",
+    component: RegisterView,
+  },
+  {
+    path: "/confirmation/:orderNumber",
+    name: "ConfirmationView",
+    component: ConfirmationView,
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

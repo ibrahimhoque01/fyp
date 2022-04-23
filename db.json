@@ -1,0 +1,127 @@
+{
+  "users": [
+    {
+      "name": "Ibrahim",
+      "email": "ibrahimhoque01@gmail.com",
+      "password": "password",
+      "id": 1
+    }
+  ],
+  "menu": [
+    {
+      "id": 1,
+      "name": "Double Cheese Burger",
+      "category": "Burgers",
+      "price": 8.95,
+      "img": "assets/img/cheese-burger.webp",
+      "description": "Double Patty beef burger topped with melted cheese and choice of toppings.",
+      "extras": [
+        "Lettuce",
+        "Tomatoes",
+        "Pickles",
+        "Onions",
+        "Ketchup",
+        "Mustard",
+        "Mayo",
+        "Relish",
+        "Jalapenos"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Fried Chicken Burger",
+      "category": "Burgers",
+      "price": 8.95,
+      "img": "assets/img/chicken-burger.webp",
+      "description": "Fried chicken burger with melted cheese and choice of toppings.",
+      "extras": [
+        "Lettuce",
+        "Tomatoes",
+        "Pickles",
+        "Onions",
+        "Ketchup",
+        "Mustard",
+        "Mayo",
+        "Relish",
+        "Jalapenos"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Falafel Burger",
+      "category": "Burgers",
+      "price": 8.95,
+      "img": "assets/img/falafel-burger.webp",
+      "description": "Homemade falfel with hummus, melted cheese and choice of toppings.",
+      "extras": [
+        "Lettuce",
+        "Tomatoes",
+        "Pickles",
+        "Onions",
+        "Ketchup",
+        "Mustard",
+        "Mayo",
+        "Relish",
+        "Jalapenos"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Salted Fries",
+      "category": "Sides",
+      "price": 3.95,
+      "img": "assets/img/salted-fries.webp",
+      "description": "Regular hand-cut fries made fresh."
+    },
+    {
+      "id": 5,
+      "name": "Peri Fries",
+      "category": "Sides",
+      "price": 4.95,
+      "img": "assets/img/peri-fries.webp",
+      "description": "Regular hand-cut fries made fresh with peri salt."
+    },
+    {
+      "id": 6,
+      "name": "Chicken Wings",
+      "category": "Sides",
+      "price": 6.95,
+      "img": "assets/img/chicken-wings.webp",
+      "description": "Fresh chicken wings with a choice of your sauce preparation."
+    },
+    {
+      "id": 7,
+      "name": "Strawberry Mojito",
+      "category": "Drinks",
+      "price": 5.95,
+      "img": "assets/img/strawb-mojito.webp",
+      "description": "Refreshing strawberry mojito made with fresh lime and strawberries."
+    },
+    {
+      "id": 8,
+      "name": "Classic Mojito",
+      "category": "Drinks",
+      "price": 5.95,
+      "img": "assets/img/classic-mojito.webp",
+      "description": "Refreshing classic mojito made with fresh lime and lemonade."
+    }
+  ],
+  "orders": [
+    {
+      "userId": 1,
+      "orderNumber": 9470,
+      "totalPrice": "26.85",
+      "cart": [
+        {
+          "itemId": "1",
+          "itemName": "Double Cheese Burger",
+          "itemPrice": 26.85,
+          "itemExtras": [],
+          "itemQuantity": 3,
+          "itemImg": "assets/img/cheese-burger.webp"
+        }
+      ],
+      "id": 1
+    }
+  ]
+}
